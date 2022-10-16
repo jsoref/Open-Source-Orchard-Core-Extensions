@@ -47,4 +47,5 @@ jobs:
             cspell:dotnet/dotnet.txt
             cspell:scala/scala.txt
           spell_check_this: Lombiq/GitHub-Actions@issue/OSOE-158
+          config: .github/actions/check-spelling
           debug: 1
