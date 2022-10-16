@@ -47,7 +47,7 @@ jobs:
           echo ::end_group::
 
       - name: Check Spelling
-        uses: Lombiq/GitHub-Actions/.github/actions/check-spelling@issue/OSOE-158
+        uses: check-spelling/check-spelling@prerelease
         with:
           dictionary-source-prefixes: '{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}'
           extra-dictionaries:
