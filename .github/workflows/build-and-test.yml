@@ -6,21 +6,6 @@ on:
   push:
 
 jobs:
-  call-build-and-test-workflow:
-    name: Build and Test - root solution
-    uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-orchard-core.yml@dev
-    with:
-      machine-types: "[\"ubuntu-latest\", \"windows-latest\"]"
-      timeout-minutes: 60
-
-  call-build-and-test-workflow-nuget-test:
-    name: Build and Test - NuGetTest solution
-    uses: Lombiq/GitHub-Actions/.github/workflows/build-and-test-orchard-core.yml@dev
-    with:
-      machine-types: "[\"ubuntu-latest\", \"windows-latest\"]"
-      build-directory: NuGetTest
-      timeout-minutes: 30
-
   check-spelling:
     name: Check Spelling
     runs-on: ubuntu-latest
@@ -49,8 +34,8 @@ jobs:
       - name: Check Spelling
         uses: check-spelling/check-spelling@prerelease
         with:
-          dictionary-source-prefixes: '{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}'
-          extra-dictionaries:
+          dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}'
+          extra_dictionaries:
             cspell:filetypes/filetypes.txt
             cspell:django/django.txt
             cspell:aws/aws.txt
@@ -61,5 +46,5 @@ jobs:
             cspell:npm/npm.txt
             cspell:dotnet/dotnet.txt
             cspell:scala/scala.txt
-          spell-check-this: Lombiq/GitHub-Actions@issue/OSOE-158
+          spell_check_this: Lombiq/GitHub-Actions@issue/OSOE-158
           debug: 1
