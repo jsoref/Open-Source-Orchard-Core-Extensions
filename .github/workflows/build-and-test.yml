@@ -49,3 +49,4 @@ jobs:
           spell_check_this: jsoref/GitHub-Actions@issue/OSOE-158
           config: .github/actions/check-spelling
           debug: 1
+
