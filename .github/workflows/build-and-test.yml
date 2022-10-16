@@ -4,8 +4,6 @@ name: Build and Test
 on:
   pull_request:
   push:
-    branches:
-      - dev
 
 jobs:
   call-build-and-test-workflow:
